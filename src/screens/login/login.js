@@ -5,6 +5,9 @@ import { Item, Label, Form, Input } from 'native-base';
 import Style from './style';
 
 export default class SplashScreen extends React.Component {
+  gotoSignup = () => {
+    this.props.navigation.navigate('Signup');
+  }
   render() {
     return (
       <View style={Style.container} >
@@ -53,7 +56,7 @@ export default class SplashScreen extends React.Component {
         </View>
         <View style={Style.sign_up_view}>
           <Text style={Style.or_text}>Don't have an account?</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={this.gotoSignup} transparent>
             <Text style={[Style.or_text, { color: 'red' }]}>Sign Up</Text>
           </TouchableOpacity>
         </View>
