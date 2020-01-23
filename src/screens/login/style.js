@@ -96,7 +96,7 @@ export default {
 	},
 	sign_in_button_text: {
 		fontFamily: 'Poppins',
-		fontSize: 30,
+		fontSize: 24,
 		color: '#ffffff',
 	},
 	or_text_view: {
