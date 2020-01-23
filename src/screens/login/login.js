@@ -7,6 +7,9 @@ import Style from './style';
 export default class SplashScreen extends React.Component {
   gotoSignup = () => {
     this.props.navigation.navigate('Signup');
+  };
+  gotoHome = () => {
+    this.props.navigation.navigate('App');
   }
   render() {
     return (
@@ -36,7 +39,7 @@ export default class SplashScreen extends React.Component {
           </TouchableOpacity>
         </View>
         <View style={Style.sign_in_button_view}>
-          <TouchableOpacity style={Style.sign_in_button}>
+          <TouchableOpacity style={Style.sign_in_button} onPress={this.gotoHome} transparent>
             <Text style={Style.sign_in_button_text}>Sign In</Text>
           </TouchableOpacity>
         </View>
