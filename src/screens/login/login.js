@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
-import { Item, Label, Form, Input } from 'native-base';
+import { Item, Form, Input } from 'native-base';
 
 import Style from './style';
 
@@ -23,10 +23,10 @@ export default class SplashScreen extends React.Component {
         <View style={Style.text_input_view}>
           <Form>
             <Item style={Style.text_input} >
-              <Input placeholder="Email or Phone" placeholderTextColor='white' style={{ color: '#ffffff' }} />
+              <Input placeholder="Email or Phone" placeholderTextColor='white' style={Style.text_input_style} />
             </Item>
             <Item style={Style.text_input} >
-              <Input placeholder="Password" placeholderTextColor='white' style={{ color: '#ffffff' }} />
+              <Input placeholder="Password" placeholderTextColor='white' style={Style.text_input_style} />
             </Item>
           </Form>
         </View>
@@ -57,10 +57,10 @@ export default class SplashScreen extends React.Component {
         <View style={Style.sign_up_view}>
           <Text style={Style.or_text}>Don't have an account?</Text>
           <TouchableOpacity onPress={this.gotoSignup} transparent>
-            <Text style={[Style.or_text, { color: 'red' }]}>Sign Up</Text>
+            <Text style={[Style.or_text, { color: 'red' }]}>SIGN UP</Text>
           </TouchableOpacity>
         </View>
-      </View >
+      </View>
     )
   }
 }

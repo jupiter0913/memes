@@ -23,23 +23,18 @@ export default class SplashScreen extends React.Component {
         <View style={Style.text_input_view}>
           <Form>
             <Item style={Style.text_input} >
-              <Input placeholder="Username" placeholderTextColor='white' style={{ color: '#ffffff' }} />
+              <Input placeholder="Username" placeholderTextColor='white' style={Style.text_input_style} />
             </Item>
             <Item style={Style.text_input} >
-              <Input placeholder="Email or Phone" placeholderTextColor='white' style={{ color: '#ffffff' }} />
+              <Input placeholder="Email or Phone" placeholderTextColor='white' style={Style.text_input_style} />
             </Item>
             <Item style={Style.text_input} >
-              <Input placeholder="Password" placeholderTextColor='white' style={{ color: '#ffffff' }} />
+              <Input placeholder="Password" placeholderTextColor='white' style={Style.text_input_style} />
             </Item>
           </Form>
         </View>
-        {/* <View style={Style.forgot_password_view}>
-          <TouchableOpacity>
-            <Text style={Style.forgot_password}>Forgot Password?</Text>
-          </TouchableOpacity>
-        </View> */}
         <View style={Style.sign_in_button_view}>
-          <TouchableOpacity style={[Style.sign_in_button, {backgroundColor: 'rgba(255,72,112,1)'}]}>
+          <TouchableOpacity style={[Style.sign_in_button, { backgroundColor: 'rgba(255,72,112,1)' }]}>
             <Text style={Style.sign_in_button_text}>Sign Up</Text>
           </TouchableOpacity>
         </View>
@@ -63,7 +58,7 @@ export default class SplashScreen extends React.Component {
             <Text style={[Style.or_text, { color: '#44e9d5' }]}>SIGN IN</Text>
           </TouchableOpacity>
         </View>
-      </View >
+      </View>
     )
   }
 }

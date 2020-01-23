@@ -72,6 +72,11 @@ export default {
 		color: '#fff',
 		backgroundColor: 'rgba(0, 12, 55, 255)',
 	},
+	text_input_style: {
+		paddingLeft: 30,
+		paddingRight: 30,
+		color: '#ffffff'
+	},
 	forgot_password_view: {
 		alignItems: 'flex-end',
 		width: width * 0.8,
@@ -117,13 +122,13 @@ export default {
 		width: 60,
 		height: 60,
 		justifyContent: 'center',
-		alignItems:'center',
+		alignItems: 'center',
 		borderRadius: 30,
 		borderColor: 'white',
 		borderWidth: 2,
 	},
 	social_button_text: {
-		fontSize:24,
+		fontSize: 24,
 		fontWeight: '700',
 		color: 'white',
 	},
