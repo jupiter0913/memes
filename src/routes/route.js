@@ -1,8 +1,8 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Splash from "../screens/splash";
-import Login from "../screens/login";
-import Signup from "../screens/signup";
+import Login from "../screens/login/login";
+import Signup from "../screens/login/signup";
 
 const MainNavigator = createStackNavigator({
   Splash: {screen: Splash},
