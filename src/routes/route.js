@@ -30,7 +30,7 @@ const AppNavigator = createBottomTabNavigator(
           <Icon name="search" size={horizontal ? 20 : 25} color={tintColor} />
       }
     },
-    Settings: {
+    Profile: {
       screen: ProfileScreen,
       navigationOptions: {
         tabBarIcon: ({ horizontal, tintColor }) =>
