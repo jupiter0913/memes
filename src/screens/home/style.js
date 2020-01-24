@@ -7,7 +7,20 @@ export default {
     width: width,
     height: height,
     backgroundColor: '#000b38',
-    // alignItems: 'center',
+  },
+  scroll_view: {
+    width: width,
+    height: height - 130,
+  },
+  title_view: {
+    width: width,
+    height: 30,
+    marginTop: 20,
+    alignItems: 'center'
+  },
+  title_text: {
+    color: 'white',
+    fontSize: 20,
   },
   total_cell_view: {
     widht: 380,
