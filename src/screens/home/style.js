@@ -10,7 +10,7 @@ export default {
   },
   scroll_view: {
     width: width,
-    height: height - 130,
+    height: height - 180,
   },
   title_view: {
     width: width,
