@@ -7,6 +7,9 @@ import SavedPostsScreen from './saved_posts';
 import Style from './style';
 
 export default class App extends Component {
+  gotoCreateMeme = () => {
+    this.props.navigation.navigate('CreateMeme');
+  };
   render() {
     return (
       <View style={Style.container}>
@@ -23,7 +26,7 @@ export default class App extends Component {
           ]}
         />
         <View style={Style.round_view}>
-          <TouchableOpacity style={Style.round_button}>
+          <TouchableOpacity style={Style.round_button} onPress={this.gotoCreateMeme}>
             <Text style={Style.add_text_style}>+</Text>
           </TouchableOpacity>
         </View>

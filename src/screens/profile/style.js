@@ -7,6 +7,7 @@ export default {
     width: width,
     height: height,
     backgroundColor: '#000b38',
+    alignItems: 'center',
   },
   profile_view: {
     height: 260,
@@ -98,5 +99,58 @@ export default {
   add_text_style: {
     fontSize: 40,
     color: 'white',
+  },
+  // Create Meme Style
+  title_view: {
+    width: width,
+    height: 30,
+    marginTop: 20,
+    alignItems: 'center'
+  },
+  title_text: {
+    color: 'white',
+    fontSize: 20,
+  },
+  retangleArea: {
+    marginTop: 30,
+    width: width * 0.9,
+    height: 600,
+    borderRadius: 30,
+    padding: 30,
+    backgroundColor: '#1c254c',
+  },
+  touch_button: {
+    backgroundColor: '#3c4566',
+    width: 300,
+    height: 100,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 15,
+    marginTop: 30
+  },
+  upload_image_view: {
+    width: 30,
+    height: 30,
+    marginRight: 20,
+  },
+  inst_cont_text: {
+    color: '#3c4566',
+    fontSize: 16,
+    marginTop: 20,
+  },
+  round_button: {
+    backgroundColor: '#48e9ca',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    marginTop: -35,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  next_image_view: {
+    width: 40,
+    height: 40
   }
+
 }

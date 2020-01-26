@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import SplashScreen from "../screens/splash";
 import LoginScreen from "../screens/login/login";
 import SignupScreen from "../screens/login/signup";
+import CreateMemeScreen from '../screens/profile/create_meme';
 
 import HomeScreen from '../screens/home';
 import SearchScreen from '../screens/search';
@@ -54,7 +55,8 @@ const InitialNavigator = createSwitchNavigator({
   Splash: SplashScreen,
   Login: LoginScreen,
   Signup: SignupScreen,
-  App: AppNavigator
+  App: AppNavigator,
+  CreateMeme: CreateMemeScreen,
 });
 
 const AppContainer = createAppContainer(InitialNavigator);
