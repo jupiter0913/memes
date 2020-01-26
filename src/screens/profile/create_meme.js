@@ -32,7 +32,7 @@ export default class App extends Component {
           <Text style={[Style.title_text, { marginTop: 50 }]}>Instructions</Text>
           <Text style={Style.inst_cont_text}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et lore magna aliquyam erat, sed diam</Text>
         </View>
-        <TouchableOpacity style={Style.round_button}>
+        <TouchableOpacity style={Style.round_next_button}>
           <Text style={{ color: 'white', fontSize: 50, fontWeight: '100', marginTop: -20 }}>→</Text>
           {/* <Image source={require('../../assets/images/mask_group_13.png')} style={Style.next_image_view} /> */}
         </TouchableOpacity>

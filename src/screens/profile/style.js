@@ -139,7 +139,7 @@ export default {
     fontSize: 16,
     marginTop: 20,
   },
-  round_button: {
+  round_next_button: {
     backgroundColor: '#48e9ca',
     width: 70,
     height: 70,
