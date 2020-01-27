@@ -13,6 +13,7 @@ import CreateMemeScreen from '../screens/profile/create_meme';
 import CreateMemeDetailScreen from '../screens/profile/create_meme_detail';
 
 import HomeScreen from '../screens/home';
+import HomeDetailScreen from '../screens/home/home_detail'
 import SearchScreen from '../screens/search';
 import ProfileScreen from '../screens/profile';
 
@@ -59,6 +60,7 @@ const InitialNavigator = createSwitchNavigator({
   App: AppNavigator,
   CreateMeme: CreateMemeScreen,
   CreateMemeDetail: CreateMemeDetailScreen,
+  HomeDetail: HomeDetailScreen
 });
 
 const AppContainer = createAppContainer(InitialNavigator);

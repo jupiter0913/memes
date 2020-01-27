@@ -11,8 +11,11 @@ import { Dimensions } from 'react-native';
 
 const { height, width } = Dimensions.get('window');
 
-
 export default class App extends Component {
+  // constructor(props) {
+  //   super(props);
+  // };
+  // const {navigate} = this.props;
   render() {
     return (
       <View style={Style.container}>
@@ -21,7 +24,7 @@ export default class App extends Component {
         </View>
         <MetroTabs
           screens={[
-            { key: '1', title: 'Trending', screen: <TrendingScreen /> },
+            { key: '1', title: 'Trending', screen: <TrendingScreen navigation={this.props.navigation}/> },
             { key: '2', title: 'My feed', screen: <MyFeedScreen /> },
           ]}
         />

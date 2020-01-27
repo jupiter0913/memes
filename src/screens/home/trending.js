@@ -1,18 +1,22 @@
 // Home screen
 import React, { Component } from 'react';
 //import react in our code.
-import { Text, ScrollView, View, Image } from 'react-native';
+import { Text, ScrollView, View, Image, TouchableOpacity } from 'react-native';
 //import all the components we are going to use.
 import Style from './style';
 
 export default class Trending extends React.Component {
+  gotoDetail = () => {
+    console.log(this.props);
+    this.props.navigation.navigate('HomeDetail');
+  };
   render() {
     return (
       <View style={Style.scroll_view}>
         <ScrollView>
           <View style={Style.total_cell_view}>
             <View style={Style.first_cell_view}>
-              <View style={Style.small_cell_view}>
+              <TouchableOpacity style={Style.small_cell_view} onPress={this.gotoDetail}>
                 <View style={Style.small_cell_image_view}>
                   <Image source={require('../../assets/images/mask_group_5.png')} style={Style.small_cell_image_view} />
                 </View>
@@ -25,8 +29,8 @@ export default class Trending extends React.Component {
                     <Text style={Style.content_text_style}>5M Views</Text>
                   </View>
                 </View>
-              </View>
-              <View style={Style.large_cell_view}>
+              </TouchableOpacity>
+              <TouchableOpacity style={Style.large_cell_view} onPress={this.gotoDetail}>
                 <View style={Style.large_cell_image_view}>
                   <Image source={require('../../assets/images/mask_group_7.png')} style={Style.large_cell_image_view} />
                 </View>
@@ -39,11 +43,12 @@ export default class Trending extends React.Component {
                     <Text style={Style.content_text_style}>5M Views</Text>
                   </View>
                 </View>
-              </View>
+              </TouchableOpacity>
             </View>
 
             <View style={Style.first_cell_view}>
-              <View style={Style.large_cell_view}>
+              <TouchableOpacity style={Style.large_cell_view} onPress={this.gotoDetail}>
+                {/* <View style={Style.large_cell_view}> */}
                 <View style={Style.large_cell_image_view}>
                   <Image source={require('../../assets/images/mask_group_6.png')} style={Style.large_cell_image_view} />
                 </View>
@@ -56,8 +61,9 @@ export default class Trending extends React.Component {
                     <Text style={Style.content_text_style}>5M Views</Text>
                   </View>
                 </View>
-              </View>
-              <View style={Style.small_cell_view}>
+              </TouchableOpacity>
+              <TouchableOpacity style={Style.small_cell_view} onPress={this.gotoDetail}>
+                {/* <View style={Style.small_cell_view}> */}
                 <View style={Style.small_cell_image_view}>
                   <Image source={require('../../assets/images/mask_group_8.png')} style={Style.small_cell_image_view} />
                 </View>
@@ -70,13 +76,14 @@ export default class Trending extends React.Component {
                     <Text style={Style.content_text_style}>5M Views</Text>
                   </View>
                 </View>
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
 
           <View style={Style.total_cell_view}>
             <View style={Style.first_cell_view}>
-              <View style={Style.small_cell_view}>
+              <TouchableOpacity style={Style.small_cell_view} onPress={this.gotoDetail}>
+                {/* <View style={Style.small_cell_view}> */}
                 <View style={Style.small_cell_image_view}>
                   <Image source={require('../../assets/images/mask_group_12.png')} style={Style.small_cell_image_view} />
                 </View>
@@ -89,8 +96,9 @@ export default class Trending extends React.Component {
                     <Text style={Style.content_text_style}>5M Views</Text>
                   </View>
                 </View>
-              </View>
-              <View style={Style.large_cell_view}>
+              </TouchableOpacity>
+              <TouchableOpacity style={Style.large_cell_view} onPress={this.gotoDetail}>
+                {/* <View style={Style.large_cell_view}> */}
                 <View style={Style.large_cell_image_view}>
                   <Image source={require('../../assets/images/mask_group_10.png')} style={Style.large_cell_image_view} />
                 </View>
@@ -103,11 +111,12 @@ export default class Trending extends React.Component {
                     <Text style={Style.content_text_style}>5M Views</Text>
                   </View>
                 </View>
-              </View>
+              </TouchableOpacity>
             </View>
 
             <View style={Style.first_cell_view}>
-              <View style={Style.large_cell_view}>
+              <TouchableOpacity style={Style.large_cell_view} onPress={this.gotoDetail}>
+                {/* <View style={Style.large_cell_view}> */}
                 <View style={Style.large_cell_image_view}>
                   <Image source={require('../../assets/images/mask_group_11.png')} style={Style.large_cell_image_view} />
                 </View>
@@ -120,8 +129,9 @@ export default class Trending extends React.Component {
                     <Text style={Style.content_text_style}>5M Views</Text>
                   </View>
                 </View>
-              </View>
-              <View style={Style.small_cell_view}>
+              </TouchableOpacity>
+              <TouchableOpacity style={Style.small_cell_view} onPress={this.gotoDetail}>
+                {/* <View style={Style.small_cell_view}> */}
                 <View style={Style.small_cell_image_view}>
                   <Image source={require('../../assets/images/mask_group_9.png')} style={Style.small_cell_image_view} />
                 </View>
@@ -134,7 +144,7 @@ export default class Trending extends React.Component {
                     <Text style={Style.content_text_style}>5M Views</Text>
                   </View>
                 </View>
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
         </ScrollView>

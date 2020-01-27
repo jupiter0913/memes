@@ -17,9 +17,6 @@ export default class App extends Component {
   constructor(props) {
     super(props);
   };
-  gotoCreateMemeDetail = () => {
-    this.props.navigation.navigate("CreateMemeDetail");
-  };
   render() {
     return (
       <View style={Style.container}>
