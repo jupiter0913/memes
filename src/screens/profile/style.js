@@ -100,7 +100,7 @@ export default {
     fontSize: 40,
     color: 'white',
   },
-  // Create Meme Style
+  // Create Meme 01 Style
   title_view: {
     width: width,
     height: 30,
@@ -151,6 +151,50 @@ export default {
   next_image_view: {
     width: 40,
     height: 40
-  }
-
+  },
+  // Create Meme 02 Style
+  retangle_area_01: {
+    marginTop: 380,
+    width: width,
+    height: 650,
+    borderRadius: 30,
+    padding: 30,
+    alignItems: 'center',
+    backgroundColor: '#1c254c',
+  },
+  text_view: {
+    alignItems: 'flex-start',
+    width: width,
+    paddingLeft: 30,
+    marginTop: 30,
+  },
+  text_input_view: {
+    alignItems: 'center',
+  },
+  text_input: {
+    opacity: 0.7,
+    marginTop: 20,
+    width: width -60,
+    // height: 50,
+    borderRadius: 25,
+    color: '#fff',
+    backgroundColor: 'rgba(0, 12, 55, 255)',
+  },
+  text_input_style: {
+    paddingLeft: 30,
+    paddingRight: 30,
+    color: '#ffffff'
+  },
+  tag_view: {
+    // marginLeft: 10,
+    marginRight: 20,
+    marginTop: 10,
+    marginBottom: 10,
+  },
+  tag_style: {
+    color: '#fff',
+    fontSize: 16,
+    marginLeft: 10,
+    marginRight: 10,
+  },
 }

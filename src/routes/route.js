@@ -10,6 +10,7 @@ import SplashScreen from "../screens/splash";
 import LoginScreen from "../screens/login/login";
 import SignupScreen from "../screens/login/signup";
 import CreateMemeScreen from '../screens/profile/create_meme';
+import CreateMemeDetailScreen from '../screens/profile/create_meme_detail';
 
 import HomeScreen from '../screens/home';
 import SearchScreen from '../screens/search';
@@ -57,6 +58,7 @@ const InitialNavigator = createSwitchNavigator({
   Signup: SignupScreen,
   App: AppNavigator,
   CreateMeme: CreateMemeScreen,
+  CreateMemeDetail: CreateMemeDetailScreen,
 });
 
 const AppContainer = createAppContainer(InitialNavigator);
