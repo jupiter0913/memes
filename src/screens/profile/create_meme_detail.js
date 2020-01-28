@@ -4,6 +4,7 @@ import { Item, Form, Input, Textarea } from 'native-base';
 import { RNChipView } from "react-native-chip-view";
 
 import Style from './style';
+import Share_Style from '../../theme/style';
 
 import { Dimensions } from 'react-native';
 
@@ -17,14 +18,23 @@ export default class App extends Component {
   constructor(props) {
     super(props);
   };
+  goBack = () => {
+    this.props.navigation.navigate("CreateMeme");
+  }
   render() {
     return (
       <View style={Style.container}>
         <ScrollView>
           <View>
             <Image source={require('../../assets/images/mask_group_18.png')} style={{ position: 'absolute', top: 0, left: 0, width: width, height: 400, resizeMode: 'cover', }} />
-            {/* <Image source={require('../../assets/images/mask_group_13.png')} style={Style.avatar_image_view} />
-            <Image source={require('../../assets/images/mask_group_13.png')} style={Style.avatar_image_view} /> */}
+          </View>
+          <View style={Share_Style.header_style}>
+            <TouchableOpacity transparent onPress={this.goBack}>
+              <Image source={require('../../assets/icons/back.png')} style={Share_Style.icon_style} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={Style.title_text}>Edit</Text>
+            </TouchableOpacity>
           </View>
           <View style={Style.retangle_area_01}>
             <View style={Style.text_view}>

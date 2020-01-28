@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 import Style from './style';
+import Share_Style from '../../theme/style';
 
 import { Dimensions } from 'react-native';
 
@@ -11,13 +12,22 @@ export default class App extends Component {
   gotoCreateMemeDetail = () => {
     this.props.navigation.navigate("CreateMemeDetail");
   }
+  goBack = () => {
+    this.props.navigation.navigate("Profile");
+  };
   render() {
     return (
       <View style={Style.container}>
         <View style={Style.title_view}>
-          {/* <Image source={require('../../assets/images/mask_group_13.png')} style={Style.avatar_image_view} /> */}
           <Text style={Style.title_text}>Create Meme</Text>
-          {/* <Image source={require('../../assets/images/mask_group_13.png')} style={Style.avatar_image_view} /> */}
+        </View>
+        <View style={Share_Style.header_style}>
+          <TouchableOpacity transparent onPress={this.goBack}>
+            <Image source={require('../../assets/icons/back.png')} style={Share_Style.icon_style} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={Style.title_text}>Edit</Text>
+          </TouchableOpacity>
         </View>
         <View style={Style.retangleArea}>
           <Text style={Style.title_text}>Choose Option</Text>
