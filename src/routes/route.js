@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Image } from 'react-native';
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
@@ -23,21 +23,24 @@ const AppNavigator = createBottomTabNavigator(
       screen: HomeScreen,
       navigationOptions: {
         tabBarIcon: ({ horizontal, tintColor }) =>
-          <Icon name="home" size={horizontal ? 20 : 25} color={tintColor} />
+          tintColor == '#47e7d6' ? <Image source={require('../assets/icons/home_active.png')} style={{ width: 42, height: 48 }} />
+            : <Image source={require('../assets/icons/home_inactive.png')} style={{ width: 42, height: 48 }} />
       }
     },
     Search: {
       screen: SearchScreen,
       navigationOptions: {
         tabBarIcon: ({ horizontal, tintColor }) =>
-          <Icon name="search" size={horizontal ? 20 : 25} color={tintColor} />
+          tintColor == '#47e7d6' ? <Image source={require('../assets/icons/explore_active.png')} style={{ width: 42, height: 48 }} />
+            : <Image source={require('../assets/icons/explore_inactive.png')} style={{ width: 42, height: 48 }} />
       }
     },
     Profile: {
       screen: ProfileScreen,
       navigationOptions: {
         tabBarIcon: ({ horizontal, tintColor }) =>
-          <Icon name="user" size={horizontal ? 20 : 25} color={tintColor} />
+          tintColor == '#47e7d6' ? <Image source={require('../assets/icons/profile_active.png')} style={{ width: 42, height: 48 }} />
+            : <Image source={require('../assets/icons/profile_inactive.png')} style={{ width: 42, height: 48 }} />
       }
     }
   },
@@ -46,6 +49,7 @@ const AppNavigator = createBottomTabNavigator(
       activeTintColor: '#47e7d6',
       inactiveTintColor: '#757d94',
       showIcon: true,
+      showLabel: false,
       style: {
         backgroundColor: '#1c254c'
       }
