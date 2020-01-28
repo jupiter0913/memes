@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
 import { Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
-import { Item, Form, Input, Textarea } from 'native-base';
+import { Form, Textarea } from 'native-base';
 
 import Style from './style';
+import Share_Style from '../../theme/style';
 import { Dimensions } from 'react-native';
 // import { ScrollView } from 'react-native-gesture-handler';
 const { width, height } = Dimensions.get('window');
 
 export default class HomeDetail extends React.Component {
+  goBack = () => {
+    this.props.navigation.navigate("Home");
+  }
   render() {
     return (
       <View style={Style.container}>
         <ScrollView>
           <View>
             <Image source={require('../../assets/images/mask_group_18.png')} style={{ width: width, height: 300, resizeMode: 'cover', }} />
+          </View>
+          <View style={Share_Style.header_style}>
+            <TouchableOpacity transparent onPress={this.goBack}>
+              <Image source={require('../../assets/icons/back.png')} style={Share_Style.icon_style} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={Style.title_text}>Edit</Text>
+            </TouchableOpacity>
           </View>
           <View style={{ width: width, height: 70, backgroundColor: 'rgba(100,100,100, 255)', opacity: 0.5, marginTop: -70 }}>
           </View>
@@ -53,7 +65,7 @@ export default class HomeDetail extends React.Component {
                 <Text style={Style.title_text}>POST</Text>
               </TouchableOpacity>
             </View>
-            
+
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
               <View style={{ flexDirection: 'row' }}>
                 <Image source={require('../../assets/images/mask_group_13_ek1.png')} style={{ width: 50, height: 50, borderRadius: 25, marginRight: 20 }} />
@@ -111,7 +123,7 @@ export default class HomeDetail extends React.Component {
             </View>
             <View style={{ width: '100%', height: 3, backgroundColor: '#19254d', marginTop: 20, marginBottom: 20 }}></View>
 
-            
+
           </View>
           <View style={{ height: 20 }}></View>
         </ScrollView>
