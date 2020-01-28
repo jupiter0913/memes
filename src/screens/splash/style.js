@@ -16,10 +16,10 @@ export default {
 		height: height,
 	},
 	textArea: {
-		top: height / 2 - 50,
-		left: 110,
-		width: 200,
-		height: 80,
+		height: height,
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 	memes_: {
 		top: 15,

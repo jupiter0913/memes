@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity, Image } from 'react-native';
 import { Item, Label, Form, Input } from 'native-base';
 
 import Style from './style';
+import Share_Style from '../../theme/style';
 
 export default class SplashScreen extends React.Component {
   gotoLogin = () => {
@@ -13,8 +14,7 @@ export default class SplashScreen extends React.Component {
       <View style={Style.container} >
         <ImageBackground source={require("../../assets/images/mask_group_2.png")} style={Style.backgroundImage} />
         <View style={Style.textArea}>
-          <Text style={Style.dopa} >Dopa</Text>
-          <Text style={Style.memes_} >memes.</Text>
+          <Image source={require('../../assets/images/logo.png')} style={Share_Style.logo_style} />
         </View>
         <View style={Style.retangleArea}></View>
         <View style={Style.sign_in_view}>

@@ -12,6 +12,11 @@ export default {
     width: width - 40,
     justifyContent: 'space-between'
   },
+  logo_style: {
+    width: 300,
+    height: 63,
+    opacity: 1,
+  },
   icon_style: {
     width: 30,
     height: 30,
