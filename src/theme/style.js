@@ -12,4 +12,8 @@ export default {
     width: width - 40,
     justifyContent: 'space-between'
   },
+  icon_style: {
+    width: 30,
+    height: 30,
+  },
 }

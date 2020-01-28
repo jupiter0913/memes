@@ -4,6 +4,7 @@ import { Item, Form, Input } from 'native-base';
 import { RNChipView } from "react-native-chip-view";
 
 import Style from './style';
+import Share_Style from '../../theme/style';
 
 import { Dimensions } from 'react-native';
 
@@ -13,6 +14,14 @@ export default class App extends Component {
   render() {
     return (
       <View style={Style.container}>
+        <View style={Share_Style.header_style}>
+          <TouchableOpacity>
+            <Image source={require('../../assets/icons/menu.png')} style={Share_Style.icon_style} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image source={require('../../assets/icons/bell.png')} style={Share_Style.icon_style} />
+          </TouchableOpacity>
+        </View>
         <View style={Style.title_view}>
           <Text style={Style.title_text}>Explore</Text>
         </View>

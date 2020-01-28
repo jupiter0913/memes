@@ -9,11 +9,6 @@ export default {
     backgroundColor: '#000b38',
     alignItems: 'center',
   },
-  
-  icon_style: {
-    width: 30,
-    height: 30,
-  },
   profile_view: {
     height: 260,
     backgroundColor: '000b38',

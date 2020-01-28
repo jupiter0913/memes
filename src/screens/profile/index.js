@@ -20,10 +20,10 @@ export default class App extends Component {
       <View style={Style.container}>
         <View style={Share_Style.header_style}>
           <TouchableOpacity>
-            <Image source={require('../../assets/icons/menu.png')} style={Style.icon_style} />
+            <Image source={require('../../assets/icons/menu.png')} style={Share_Style.icon_style} />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image source={require('../../assets/icons/bell.png')} style={Style.icon_style} />
+            <Image source={require('../../assets/icons/bell.png')} style={Share_Style.icon_style} />
           </TouchableOpacity>
         </View>
         <View style={Style.profile_view}>
