@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { Form, Textarea } from 'native-base';
+import { SliderBox } from 'react-native-image-slider-box';
 
 import Style from './style';
 import Share_Style from '../../theme/style';
@@ -9,6 +10,18 @@ import { Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 export default class HomeDetail extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      images: [
+        require('../../assets/images/mask_group_5.png'),
+        require('../../assets/images/mask_group_6.png'),
+        require('../../assets/images/mask_group_7.png'),
+        require('../../assets/images/mask_group_8.png'),
+        require('../../assets/images/mask_group_18.png'),
+      ]
+    };
+  }   // other component code ... }
   goBack = () => {
     this.props.navigation.navigate("Home");
   }
@@ -17,7 +30,17 @@ export default class HomeDetail extends React.Component {
       <View style={Style.container}>
         <ScrollView>
           <View>
-            <Image source={require('../../assets/images/mask_group_18.png')} style={{ width: width, height: 300, resizeMode: 'cover', }} />
+            <SliderBox
+              images={this.state.images}
+              sliderBoxHeight={300}
+              onCurrentImagePressed={
+                index => console.warn(`image ${index} pressed`)
+              }
+              dotColor="#FFEE58"
+              inactiveDotColor="#90A4AE"
+              paginationBoxVerticalPadding={80}
+              autoplay
+              circleLoop />
           </View>
           <View style={Share_Style.header_style}>
             <TouchableOpacity transparent onPress={this.goBack}>
