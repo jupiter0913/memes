@@ -87,5 +87,23 @@ export default {
     color: '#565f8a',
     marginTop: -2,
     fontSize: 13
-  }
+  },
+  // home detail page style
+  text_input_view: {
+    alignItems: 'center',
+  },
+  text_input: {
+    opacity: 0.7,
+    marginTop: 20,
+    width: width -60,
+    // height: 50,
+    borderRadius: 25,
+    color: '#fff',
+    backgroundColor: 'rgba(0, 12, 55, 255)',
+  },
+  text_input_style: {
+    paddingLeft: 30,
+    paddingRight: 30,
+    color: '#ffffff'
+  },
 }
