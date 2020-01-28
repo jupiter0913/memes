@@ -4,7 +4,12 @@ import MetroTabs from '../../components/MetroTabs';
 import CreatedPostsScreen from './created_posts';
 import SavedPostsScreen from './saved_posts';
 
+import { Dimensions } from 'react-native';
+
+const { height, width } = Dimensions.get('window');
+
 import Style from './style';
+import Share_Style from '../../theme/style';
 
 export default class App extends Component {
   gotoCreateMeme = () => {
@@ -13,6 +18,14 @@ export default class App extends Component {
   render() {
     return (
       <View style={Style.container}>
+        <View style={Share_Style.header_style}>
+          <TouchableOpacity>
+            <Image source={require('../../assets/icons/menu.png')} style={Style.icon_style} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image source={require('../../assets/icons/bell.png')} style={Style.icon_style} />
+          </TouchableOpacity>
+        </View>
         <View style={Style.profile_view}>
           <Image source={require('../../assets/images/mask_group_5.png')} style={Style.avatar_image_view} />
           <Text style={Style.name_text}>Mark Hemlin</Text>

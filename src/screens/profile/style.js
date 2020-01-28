@@ -9,6 +9,11 @@ export default {
     backgroundColor: '#000b38',
     alignItems: 'center',
   },
+  
+  icon_style: {
+    width: 30,
+    height: 30,
+  },
   profile_view: {
     height: 260,
     backgroundColor: '000b38',
@@ -174,7 +179,7 @@ export default {
   text_input: {
     opacity: 0.7,
     marginTop: 20,
-    width: width -60,
+    width: width - 60,
     // height: 50,
     borderRadius: 25,
     color: '#fff',
