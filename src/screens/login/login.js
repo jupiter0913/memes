@@ -1,15 +1,22 @@
 import React from 'react';
 import { View, Text, ImageBackground, TouchableOpacity, Image } from 'react-native';
 import { Item, Form, Input } from 'native-base';
+import { firebaseAuth } from '../../../environment/config';
 
 import Style from './style';
 import Share_Style from '../../theme/style';
 
 export default class SplashScreen extends React.Component {
+  state = { email: '', password: '', errorMessage: null }
   gotoSignup = () => {
     this.props.navigation.navigate('Signup');
   };
   gotoHome = () => {
+    firebaseAuth.signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then(() => this.handleLogin())
+      .catch(error => { this.setState({ errorMessage: error.message }); alert(error.message); });
+  }
+  handleLogin = () => {
     this.props.navigation.navigate('App');
   }
   render() {
@@ -26,10 +33,10 @@ export default class SplashScreen extends React.Component {
         <View style={Style.text_input_view}>
           <Form>
             <Item style={Style.text_input} >
-              <Input placeholder="Email or Phone" placeholderTextColor='white' style={Style.text_input_style} />
+              <Input placeholder="Email or Phone" placeholderTextColor='white' style={Style.text_input_style} onChangeText={email => this.setState({ email })} value={this.state.email} />
             </Item>
             <Item style={Style.text_input} >
-              <Input placeholder="Password" placeholderTextColor='white' style={Style.text_input_style} />
+              <Input placeholder="Password" secureTextEntry={true} placeholderTextColor='white' style={Style.text_input_style} onChangeText={password => this.setState({ password })} value={this.state.password} />
             </Item>
           </Form>
         </View>
